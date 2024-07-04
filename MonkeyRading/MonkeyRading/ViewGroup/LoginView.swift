@@ -20,6 +20,8 @@ struct LoginView: View {
     }
 }
 
-#Preview {
-    LoginView()
+struct LoginView_Preview: PreviewProvider {
+    static var previews: some View {
+        LoginView()
+    }
 }
