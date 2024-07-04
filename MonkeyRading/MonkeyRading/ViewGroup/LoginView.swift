@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct LoginView: View {
+    
+    @StateObject var viewModel: LoginViewModel
+    
     var body: some View {
         VStack(content: {
             
@@ -51,16 +54,10 @@ struct LoginView: View {
     
     private var bottomButton: some View {
         Button(action: {
-            print("카카오 버튼 클릭")
+            viewModel.loginKakao()
         }, label: {
             Icon.KakaoBtn.image
                 .fixedSize()
         })
-    }
-}
-
-struct LoginView_Preview: PreviewProvider {
-    static var previews: some View {
-        LoginView()
     }
 }

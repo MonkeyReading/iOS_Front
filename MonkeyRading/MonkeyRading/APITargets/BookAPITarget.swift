@@ -48,26 +48,26 @@ extension BookAPITarget: TargetType {
         switch self {
         case .getBookList:
             let jsonData = """
-{
-book_list : [
-{
-book_id : int,
-title : string,
-image_url : string
-},
-{
-book_id : int,
-title : string,
-image_url : string
-},
-{
-book_id : int,
-title : string,
-image_url : string
-}
-]
-}
-"""
+                    {
+                        "book_list": [
+                            {
+                                "book_id": 1,
+                                "title": "홍길동전",
+                                "image_url": "https://contents.kyobobook.co.kr/sih/fit-in/458x0/pdt/9791188331796.jpg"
+                            },
+                            {
+                                "book_id": 2,
+                                "title": "홍길동전",
+                                "image_url": "https://contents.kyobobook.co.kr/sih/fit-in/458x0/pdt/9791188331796.jpg"
+                            },
+                            {
+                                "book_id": 3,
+                                "title": "홍길동전",
+                                "image_url": "https://contents.kyobobook.co.kr/sih/fit-in/458x0/pdt/9791188331796.jpg"
+                            }
+                        ]
+                    }
+                    """
             return Data(jsonData.utf8)
         }
     }
