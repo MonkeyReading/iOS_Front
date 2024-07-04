@@ -20,7 +20,7 @@
 		48011EB52C36A9B5008A5E0F /* MonkeyRading.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MonkeyRading.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		48011EB82C36A9B5008A5E0F /* MonkeyRadingApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonkeyRadingApp.swift; sourceTree = "<group>"; };
 		48011EBF2C36A9B7008A5E0F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		48011F1D2C36ADA2008A5E0F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		48011F1D2C36ADA2008A5E0F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -80,17 +80,46 @@
 			);
 			target = 48011EB42C36A9B5008A5E0F /* MonkeyRading */;
 		};
+		4871FE802C36CBA2003BCD88 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				LoginManager.swift,
+			);
+			target = 48011EB42C36A9B5008A5E0F /* MonkeyRading */;
+		};
+		4871FE832C36CC01003BCD88 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				LoginData.swift,
+			);
+			target = 48011EB42C36A9B5008A5E0F /* MonkeyRading */;
+		};
+		488110852C36C7D400E6A742 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				LoginViewModel.swift,
+			);
+			target = 48011EB42C36A9B5008A5E0F /* MonkeyRading */;
+		};
+		488110892C36C8A600E6A742 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				UserAPITarget.swift,
+			);
+			target = 48011EB42C36A9B5008A5E0F /* MonkeyRading */;
+		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		48011ECB2C36A9E7008A5E0F /* ViewModelGroup */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = ViewModelGroup; sourceTree = "<group>"; };
-		48011ECC2C36A9F6008A5E0F /* DataModelGroup */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = DataModelGroup; sourceTree = "<group>"; };
+		48011ECB2C36A9E7008A5E0F /* ViewModelGroup */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (488110852C36C7D400E6A742 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = ViewModelGroup; sourceTree = "<group>"; };
+		48011ECC2C36A9F6008A5E0F /* DataModelGroup */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (4871FE832C36CC01003BCD88 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = DataModelGroup; sourceTree = "<group>"; };
 		48011ECD2C36A9FB008A5E0F /* ViewGroup */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (48011ECF2C36AA20008A5E0F /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = ViewGroup; sourceTree = "<group>"; };
 		48011ECE2C36AA04008A5E0F /* SettingGroup */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (48011ED22C36AA47008A5E0F /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = SettingGroup; sourceTree = "<group>"; };
 		48011ED92C36AAB7008A5E0F /* UserKeychain */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (48011EDC2C36AAC1008A5E0F /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = UserKeychain; sourceTree = "<group>"; };
 		48011EDF2C36AAE8008A5E0F /* TokenRefresh */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (48011EE22C36AAFC008A5E0F /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = TokenRefresh; sourceTree = "<group>"; };
 		48011EF42C36ABF9008A5E0F /* Fonts */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (48011F0C2C36AD39008A5E0F /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = Fonts; sourceTree = "<group>"; };
-		48011F622C36B757008A5E0F /* Kakao */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Kakao; sourceTree = "<group>"; };
+		48011F622C36B757008A5E0F /* Kakao */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (4871FE802C36CBA2003BCD88 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = Kakao; sourceTree = "<group>"; };
+		488110862C36C83800E6A742 /* APITargets */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (488110892C36C8A600E6A742 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = APITargets; sourceTree = "<group>"; };
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,8 +157,9 @@
 		48011EB72C36A9B5008A5E0F /* MonkeyRading */ = {
 			isa = PBXGroup;
 			children = (
-				48011F622C36B757008A5E0F /* Kakao */,
 				48011F1D2C36ADA2008A5E0F /* Info.plist */,
+				488110862C36C83800E6A742 /* APITargets */,
+				48011F622C36B757008A5E0F /* Kakao */,
 				48011EF42C36ABF9008A5E0F /* Fonts */,
 				48011EDF2C36AAE8008A5E0F /* TokenRefresh */,
 				48011ED92C36AAB7008A5E0F /* UserKeychain */,
