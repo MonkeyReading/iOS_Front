@@ -37,7 +37,26 @@ class HomeViewModel: ObservableObject {
             homeResponseData = decodedData
         } catch {
             homeResponseData = nil
-            print("단어 해독 실패 : \(error)")
+            if let error = error as? DecodingError {
+                        switch error {
+                        case .dataCorrupted(let context):
+                            print("Data corrupted: \(context.debugDescription)")
+                            if let underlyingError = context.underlyingError {
+                                print("Underlying error: \(underlyingError.localizedDescription)")
+                            }
+                        case .keyNotFound(let key, let context):
+                            print("Key '\(key)' not found: \(context.debugDescription)")
+                        case .typeMismatch(let type, let context):
+                            print("Type '\(type)' mismatch: \(context.debugDescription)")
+                        case .valueNotFound(let value, let context):
+                            print("Value '\(value)' not found: \(context.debugDescription)")
+                        @unknown default:
+                            print("Unknown error: \(error)")
+                        }
+                    } else {
+                        print("Error: \(error.localizedDescription)")
+                    }
+            
         }
     }
     

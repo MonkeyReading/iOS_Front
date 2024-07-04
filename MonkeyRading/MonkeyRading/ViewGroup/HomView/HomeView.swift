@@ -8,12 +8,13 @@
 import SwiftUI
 
 struct HomeView: View {
-    @EnvironmentObject var userState: UserState
+//    @EnvironmentObject var userState: UserState
     @StateObject private var viewModel = HomeViewModel()
     
     var body: some View {
         ScrollView(.vertical, content: {
             VStack(spacing: 20, content: {
+                Icon.backgroundImage.image
                 lastWord
                 lastSentence
             })
@@ -35,7 +36,6 @@ struct HomeView: View {
                     WordCard(wordData: data)
                 }
             })
-            .border(Color.black)
             .padding(.horizontal, 15)
             .frame(maxWidth: .infinity, maxHeight: .infinity)
             .refreshable {
