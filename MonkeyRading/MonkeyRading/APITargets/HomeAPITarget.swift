@@ -113,7 +113,7 @@ extension HomeAPITarget: TargetType {
 {
 "sentence_id" : 2,
 "title": "ANIMAL FARM",
-"quote": "“Brown Bear, Brown Bear, What do you see?”, “I see a red bird looking at me.”",
+"quote": "Brown Bear, Brown Bear, What do you see?”, “I see a red bird looking at me.",
 "image_url" : "https://contents.kyobobook.co.kr/sih/fit-in/458x0/pdt/9788901163277.jpg"
 }
 ]
