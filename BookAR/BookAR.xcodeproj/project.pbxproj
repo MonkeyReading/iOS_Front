@@ -3,12 +3,10 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 60;
+	objectVersion = 70;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		48F241192C368694003B0D4D /* BookARApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48F241182C368694003B0D4D /* BookARApp.swift */; };
-		48F2411B2C368694003B0D4D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48F2411A2C368694003B0D4D /* ContentView.swift */; };
 		48F2411D2C368695003B0D4D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 48F2411C2C368695003B0D4D /* Assets.xcassets */; };
 		48F241202C368695003B0D4D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 48F2411F2C368695003B0D4D /* Preview Assets.xcassets */; };
 		48F2413B2C3691F8003B0D4D /* KakaoSDK in Frameworks */ = {isa = PBXBuildFile; productRef = 48F2413A2C3691F8003B0D4D /* KakaoSDK */; };
@@ -25,11 +23,33 @@
 
 /* Begin PBXFileReference section */
 		48F241152C368694003B0D4D /* BookAR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BookAR.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		48F241182C368694003B0D4D /* BookARApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookARApp.swift; sourceTree = "<group>"; };
-		48F2411A2C368694003B0D4D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		48F2411C2C368695003B0D4D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		48F2411F2C368695003B0D4D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		48F241552C36950F003B0D4D /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				BookARApp.swift,
+			);
+			target = 48F241142C368694003B0D4D /* BookAR */;
+		};
+		48F241562C369534003B0D4D /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				LoginView.swift,
+			);
+			target = 48F241142C368694003B0D4D /* BookAR */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		48F241512C3694F7003B0D4D /* Setting */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (48F241552C36950F003B0D4D /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = Setting; sourceTree = "<group>"; };
+		48F241522C3694FA003B0D4D /* ViewModel */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = ViewModel; sourceTree = "<group>"; };
+		48F241532C3694FD003B0D4D /* View */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (48F241562C369534003B0D4D /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = View; sourceTree = "<group>"; };
+		48F241542C369506003B0D4D /* DataModel */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = DataModel; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		48F241122C368694003B0D4D /* Frameworks */ = {
@@ -71,8 +91,10 @@
 		48F241172C368694003B0D4D /* BookAR */ = {
 			isa = PBXGroup;
 			children = (
-				48F241182C368694003B0D4D /* BookARApp.swift */,
-				48F2411A2C368694003B0D4D /* ContentView.swift */,
+				48F241542C369506003B0D4D /* DataModel */,
+				48F241532C3694FD003B0D4D /* View */,
+				48F241522C3694FA003B0D4D /* ViewModel */,
+				48F241512C3694F7003B0D4D /* Setting */,
 				48F2411C2C368695003B0D4D /* Assets.xcassets */,
 				48F2411E2C368695003B0D4D /* Preview Content */,
 			);
@@ -174,8 +196,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				48F2411B2C368694003B0D4D /* ContentView.swift in Sources */,
-				48F241192C368694003B0D4D /* BookARApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
