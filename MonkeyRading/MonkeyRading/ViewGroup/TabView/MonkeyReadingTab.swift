@@ -13,4 +13,5 @@ enum MonkeyReadingTab: String, CaseIterable {
     case barcode = "바코드"
     case book = "책"
     case ar = "증강"
+    case question = "질문"
 }

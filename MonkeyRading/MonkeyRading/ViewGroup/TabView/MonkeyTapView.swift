@@ -55,6 +55,15 @@ struct MonkeyTapView: View {
                             .aspectRatio(contentMode: .fit)
                     }
                     .tag(MonkeyReadingTab.ar)
+                
+                QuestionView()
+                    .tabItem {
+                        Icon.question.image
+                            .fixedSize()
+                            .aspectRatio(contentMode: .fit)
+                    }
+                    .tag(MonkeyReadingTab.question)
+                    .environmentObject(userState)
             }
             
             
