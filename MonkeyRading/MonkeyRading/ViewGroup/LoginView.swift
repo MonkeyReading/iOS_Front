@@ -9,14 +9,11 @@ import SwiftUI
 
 struct LoginView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("world!")
-                .font(.yangji(type: .regular, size: 16))
-        }
-        .padding()
+        VStack(spacing: 22, content: {
+            Icon.smileFace.image
+                .fixedSize()
+                .aspectRatio(contentMode: .fit)
+        })
     }
 }
 
