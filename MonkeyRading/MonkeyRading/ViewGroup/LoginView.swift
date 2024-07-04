@@ -19,28 +19,32 @@ struct LoginView: View {
             
             bottomButton
         })
+        .frame(maxWidth: .infinity, maxHeight: .infinity).ignoresSafeArea(.all)
+        .background(Color.ColorMain)
+        
     }
     
     private var topLogo: some View {
-        VStack(spacing: 22, content: {
+        VStack(spacing: 23, content: {
+            upperLogin
+            
             Icon.smileFace.image
                 .fixedSize()
                 .aspectRatio(contentMode: .fit)
-            
-            bottonLogin
         })
     }
     
-    private var bottonLogin: some View {
-        VStack(spacing: 10, content: {
-            Text("어린이들을 위한 AR 영어 독서 교육")
-                .foregroundStyle(Color.Font_Emphasize)
-                .font(.yangji(type: .regular, size: 14))
-                .kerning(-0.3)
+    private var upperLogin: some View {
+        VStack(alignment: .center, spacing: 5, content: {
             
             Text("몽키리딩")
                 .font(.yangji(type: .regular, size: 32))
-                .foregroundStyle(Color.ColorMain)
+                .foregroundStyle(Color.Color_White)
+                .kerning(-0.3)
+            
+            Text("어린이들을 위한 AR 영어 독서 교육")
+                .foregroundStyle(Color.Font_Emphasize)
+                .font(.yangji(type: .regular, size: 14))
                 .kerning(-0.3)
         })
     }
