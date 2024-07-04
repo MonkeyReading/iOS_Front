@@ -36,10 +36,21 @@ class NickNameViewModel: ObservableObject, ImageHandling {
         }
     }
     
+    @Published public var age: String = "" {
+        didSet {
+            if age.count > 0 {
+                beginBtnTwo = true
+            } else {
+                beginBtnTwo = false
+            }
+        }
+    }
+    
     
     // MARK: - btnProperty
     /// 시작하기 버튼 활성화 여부 판단
     @Published public var beginBtn: Bool = false
+    @Published public var beginBtnTwo: Bool = false
     
     // MARK: - ImageProperty
     /// 이미지 피커 선택되었는가?

@@ -27,8 +27,15 @@
 		48011ECF2C36AA20008A5E0F /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
+				HomView/HomeView.swift,
+				HomView/SentenceCard.swift,
+				HomView/WordCard.swift,
 				LoginView.swift,
 				NickNameView.swift,
+				TabView/CustomTabview.swift,
+				TabView/KeyBoardObserver.swift,
+				TabView/MonkeyReadingTab.swift,
+				TabView/TapView.swift,
 			);
 			target = 48011EB42C36A9B5008A5E0F /* MonkeyRading */;
 		};
@@ -93,6 +100,7 @@
 		4871FE832C36CC01003BCD88 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
+				HomeData.swift,
 				LoginData.swift,
 				LoginNickNameDataModel.swift,
 			);
@@ -116,6 +124,7 @@
 		488110852C36C7D400E6A742 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
+				HomeViewModel.swift,
 				LoginViewModel.swift,
 				NickNameViewModel.swift,
 			);
@@ -124,6 +133,7 @@
 		488110892C36C8A600E6A742 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
+				HomeAPITarget.swift,
 				UserAPITarget.swift,
 			);
 			target = 48011EB42C36A9B5008A5E0F /* MonkeyRading */;

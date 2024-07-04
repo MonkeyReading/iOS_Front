@@ -34,7 +34,7 @@ struct CustomTextField: View {
         ZStack(content: {
             RoundedRectangle(cornerRadius: 12)
                 .inset(by: 0.5)
-                .stroke(text.isEmpty ? Color.black : Color.warningColor, lineWidth: 1)
+                .stroke(text.isEmpty ? Color.ColorDisable : Color.warningColor, lineWidth: 1)
             
             customTextField
         })
