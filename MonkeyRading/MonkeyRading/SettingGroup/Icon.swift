@@ -9,7 +9,7 @@ import SwiftUI
 
 enum Icon: String {
     // MARK: - Login
-    case logo = "logo"
+    case smileFace = "smileFace"
     
     // MARK: - Function
     var image: Image {
