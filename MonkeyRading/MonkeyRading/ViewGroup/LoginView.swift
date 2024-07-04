@@ -34,13 +34,13 @@ struct LoginView: View {
     private var bottonLogin: some View {
         VStack(spacing: 10, content: {
             Text("어린이들을 위한 AR 영어 독서 교육")
-                .foregroundStyle(Color.black)
+                .foregroundStyle(Color.Font_Emphasize)
                 .font(.yangji(type: .regular, size: 14))
                 .kerning(-0.3)
             
             Text("몽키리딩")
                 .font(.yangji(type: .regular, size: 32))
-                .foregroundStyle(Color.black)
+                .foregroundStyle(Color.ColorMain)
                 .kerning(-0.3)
         })
     }
