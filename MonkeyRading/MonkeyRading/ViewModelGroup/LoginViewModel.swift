@@ -11,18 +11,12 @@ import Moya
 class LoginViewModel: ObservableObject {
     
     private let keyChainManager = KeyChainManager.standard
-    private let tokenProvider: TokenProvider
-    private let accessTokenRefresher: AccessTokenRefresher
-    private let session: Session
-
-    
     var provider: MoyaProvider<UserAPITarget>
     
-    init() {
-        tokenProvider = TokenProvider()
-        accessTokenRefresher = AccessTokenRefresher(tokenProvider: tokenProvider)
-        session = Session(interceptor: accessTokenRefresher)
-        provider = MoyaProvider<UserAPITarget>(session: session)
+    init(
+        provider: MoyaProvider<UserAPITarget> = APIManager.shared.createProvider(for: UserAPITarget.self)
+    ) {
+        self.provider = provider
     }
     
     private var loginManager = LoginManager()
@@ -63,7 +57,7 @@ class LoginViewModel: ObservableObject {
             
             let saveTrue = keyChainManager.saveSession(userInfo, for: "userSession")
             print("키체인 저장 \(saveTrue)")
-            } catch {
+        } catch {
             print("유저 정보 저장 에러: \(error)")
         }
     }
