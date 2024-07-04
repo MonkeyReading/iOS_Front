@@ -115,8 +115,6 @@ extension HomeAPITarget: TargetType {
 "title": "ANIMAL FARM",
 "quote": "Brown Bear, Brown Bear, What do you see?”, “I see a red bird looking at me.",
 "image_url" : "https://contents.kyobobook.co.kr/sih/fit-in/458x0/pdt/9788901163277.jpg"
-}
-]
 },
 {
 "sentence_id" : 3,
@@ -124,40 +122,29 @@ extension HomeAPITarget: TargetType {
 "quote": "Once upon a time there were four little Rabbits, and their names were Flopsy, Mopsy, Cotton-tail, and Peter.",
 "image_url" : "https://contents.kyobobook.co.kr/sih/fit-in/458x0/pdt/9791188331796.jpg"
 },
-P
-]
-},
 {
 "sentence_id" : 4,
 "title": "The Lion and the Mouse",
 "quote": "The lion was so tickled by the idea of the mouse helping him that he lifted his paw and let him go.",
 "image_url" : "https://contents.kyobobook.co.kr/sih/fit-in/458x0/pdt/450D000039616.jpg"
-}
-]
 },
 {
 "sentence_id" : 5,
 "title": "The Tale of Little Pig Robinson",
 "quote": "Little Pig Robinson saw the world beyond his little island for the first time.",
 "image_url" : "https://contents.kyobobook.co.kr/sih/fit-in/458x0/pdt/480D170107920.jpg"
-}
-]
 },
 {
 "sentence_id" : 6,
 "title": "An Adventure for Lia and Lion",
 "quote": "Lia and her lion friend embarked on a journey across the vast savannah.",
 "image_url" : "https://contents.kyobobook.co.kr/sih/fit-in/458x0/pdt/480D230508830.jpg"
-}
-]
 },
 {
 "sentence_id" : 7,
 "title": "The Sun and the Moon / The Tiger and the Traveler",
 "quote": "The tiger watched the traveler cautiously, its eyes gleaming in the dark.",
 "image_url" : "https://contents.kyobobook.co.kr/sih/fit-in/458x0/pdt/9791195548682.jpg"
-}
-]
 },
 {
 "sentence_id" : 8,

@@ -43,8 +43,6 @@
 				ISBNView/SuccessISBNView.swift,
 				LoginView.swift,
 				NickNameView.swift,
-				Question/BookQuestionCard.swift,
-				Question/QuestionView.swift,
 				TabView/CustomTabview.swift,
 				TabView/KeyBoardObserver.swift,
 				TabView/MonkeyReadingTab.swift,
@@ -103,6 +101,17 @@
 			);
 			target = 48011EB42C36A9B5008A5E0F /* MonkeyRading */;
 		};
+		4871006D2C3740B4003BCD88 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Duck/duck.mp3,
+				Duck/duck.usdz,
+				Frog/frog.mp3,
+				Frog/frog.usdz,
+				horse/horse.usdz,
+			);
+			target = 48011EB42C36A9B5008A5E0F /* MonkeyRading */;
+		};
 		4871FE802C36CBA2003BCD88 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
@@ -114,7 +123,6 @@
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				BookData.swift,
-				BookQuestionCard.swift,
 				BookSetData.swift,
 				HomeData.swift,
 				LoginData.swift,
@@ -135,7 +143,6 @@
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				BookRecommendDetailRow.swift,
-				CustomNavigation.swift,
 				CustomTextField.swift,
 			);
 			target = 48011EB42C36A9B5008A5E0F /* MonkeyRading */;
@@ -148,7 +155,6 @@
 				ISBNInputViewModel.swift,
 				LoginViewModel.swift,
 				NickNameViewModel.swift,
-				QuestionViewModel.swift,
 			);
 			target = 48011EB42C36A9B5008A5E0F /* MonkeyRading */;
 		};
@@ -159,32 +165,7 @@
 				CreateBook.swift,
 				HomeAPITarget.swift,
 				KakaoBookAPITarget.swift,
-				QuestionAPITarget.swift,
 				UserAPITarget.swift,
-			);
-			target = 48011EB42C36A9B5008A5E0F /* MonkeyRading */;
-		};
-		489A79A72C3766AF00EE3BD8 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				Bear/bear.mp3,
-				Bear/bear.usdz,
-				Chicken/Chicken.mp3,
-				Chicken/chicken.usdz,
-				Crow/crow.mp3,
-				Crow/crow.usdz,
-				Dog/Dog_sound.mp3,
-				Dog/Dog.usdz,
-				Duck/duck.mp3,
-				Duck/duck.usdz,
-				Frog/frog.mp3,
-				Frog/frog.usdz,
-				horse/horse.mp3,
-				horse/horse.usdz,
-				Pig/Pig_sound.mp3,
-				Pig/Pig.usdz,
-				Sheep/sheep.mp3,
-				Sheep/sheep.usdz,
 			);
 			target = 48011EB42C36A9B5008A5E0F /* MonkeyRading */;
 		};
@@ -199,7 +180,7 @@
 		48011EDF2C36AAE8008A5E0F /* TokenRefresh */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (48011EE22C36AAFC008A5E0F /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = TokenRefresh; sourceTree = "<group>"; };
 		48011EF42C36ABF9008A5E0F /* Fonts */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (48011F0C2C36AD39008A5E0F /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = Fonts; sourceTree = "<group>"; };
 		48011F622C36B757008A5E0F /* Kakao */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (4871FE802C36CBA2003BCD88 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = Kakao; sourceTree = "<group>"; };
-		487100302C37402A003BCD88 /* USDZFile */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (489A79A72C3766AF00EE3BD8 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = USDZFile; sourceTree = "<group>"; };
+		487100302C37402A003BCD88 /* USDZFile */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (4871006D2C3740B4003BCD88 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = USDZFile; sourceTree = "<group>"; };
 		4871FEA42C36D995003BCD88 /* ImagePicker */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (4871FEA72C36D9AA003BCD88 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = ImagePicker; sourceTree = "<group>"; };
 		4871FEAC2C36DD6C003BCD88 /* Components */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (4871FEB02C36DD7C003BCD88 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = Components; sourceTree = "<group>"; };
 		488110862C36C83800E6A742 /* APITargets */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (488110892C36C8A600E6A742 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = APITargets; sourceTree = "<group>"; };

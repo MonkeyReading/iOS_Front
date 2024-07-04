@@ -34,7 +34,7 @@ struct BookSetView: View {
                 .aspectRatio(contentMode: .fit)
                 .frame(maxWidth: 60, maxHeight: 60)
             VStack(alignment: .leading, spacing: 2, content: {
-                Text("\(String(describing: userState.userName))어린이의")
+                Text("\(userState.userName ?? "")어린이의")
                     .font(.yangji(type: .regular, size: 20))
                     .foregroundStyle(Color.ColorMain)
                 Text("꿈과 함께 가득한 서재")

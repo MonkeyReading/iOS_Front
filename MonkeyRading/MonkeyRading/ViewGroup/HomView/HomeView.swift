@@ -23,7 +23,7 @@ struct HomeView: View {
                         Text("어서오세요!")
                             .font(.yangji(type: .regular, size: 20))
                             .foregroundStyle(Color.ColorDisable)
-                        Text("\(String(describing: userState.userName)) 어린이!")
+                        Text("\(userState.userName ?? "") 어린이!")
                             .font(.yangji(type: .regular, size: 20))
                             .foregroundStyle(Color.ColorMain)
                     })
