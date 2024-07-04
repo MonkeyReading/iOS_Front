@@ -11,6 +11,7 @@ import Moya
 /// 유저 정보로그인
 enum UserAPITarget {
     case userLogin(token: String)
+    case userProfile
 }
 
 extension UserAPITarget: TargetType {
@@ -22,13 +23,17 @@ extension UserAPITarget: TargetType {
     var path: String {
         switch self {
         case .userLogin:
-            return "api"
+            return "/auth/kakao"
+        case .userProfile:
+            return "/user/updateProfile"
         }
     }
     
     var method: Moya.Method {
         switch self {
         case .userLogin:
+            return .post
+        case .userProfile:
             return .post
         }
     }
@@ -37,11 +42,12 @@ extension UserAPITarget: TargetType {
         switch self {
         case .userLogin(let token):
             return .requestParameters(parameters: ["authorizationCode": token], encoding: URLEncoding.queryString)
+        case .userProfile:
+            return .requestPlain
         }
     }
     
     var headers: [String: String]? {
-        
            return ["accept": "*/*"]
        }
 }

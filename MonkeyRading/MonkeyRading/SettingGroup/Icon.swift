@@ -10,7 +10,8 @@ import SwiftUI
 enum Icon: String {
     // MARK: - Login
     case smileFace = "smileFace"
-    
+    case KakaoBtn = "KakaoBtn"
+    case baseProfile = "baseProfile"
     // MARK: - Function
     var image: Image {
         return Image(self.rawValue)
