@@ -17,7 +17,7 @@ struct MonkeyRadingApp: App {
 //    }
     var body: some Scene {
         WindowGroup {
-            LoginView()
+            MonkeyTapView()
         }
     }
 }

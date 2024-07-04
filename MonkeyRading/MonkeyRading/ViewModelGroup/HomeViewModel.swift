@@ -37,25 +37,26 @@ class HomeViewModel: ObservableObject {
             homeResponseData = decodedData
         } catch {
             homeResponseData = nil
-            print("단어 해독 실패 : \(error)")
+            print("단어장 해독 불가")
+            
         }
     }
     
     public func getSentence() {
-        provider.request(.getHomeData) { [weak self] result in
+        provider.request(.sentenceData) { [weak self] result in
             switch result {
             case .success(let response):
-                self?.handleResponse(response: response)
+                self?.handlesentence(response: response)
             case .failure(let error):
                 print("단어 받아오기 에러: \(error)")
             }
         }
     }
     
-    public func Sentence(response: Response) {
+    public func handlesentence(response: Response) {
         do {
-            let decodedData = try JSONDecoder().decode(HomeResponseData.self, from: response.data)
-            homeResponseData = decodedData
+            let decodedData = try JSONDecoder().decode(HomeSentenceData.self, from: response.data)
+            sentenceData = decodedData
         } catch {
             homeResponseData = nil
             print("단어 해독 실패 : \(error)")

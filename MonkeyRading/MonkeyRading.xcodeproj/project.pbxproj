@@ -27,15 +27,19 @@
 		48011ECF2C36AA20008A5E0F /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
+				Book/BookSetView.swift,
 				HomView/HomeView.swift,
 				HomView/SentenceCard.swift,
 				HomView/WordCard.swift,
+				ISBNView/BarcodeScannerView.swift,
+				ISBNView/ISBNCameraView.swift,
+				ISBNView/SuccessISBNView.swift,
 				LoginView.swift,
 				NickNameView.swift,
 				TabView/CustomTabview.swift,
 				TabView/KeyBoardObserver.swift,
 				TabView/MonkeyReadingTab.swift,
-				TabView/TapView.swift,
+				TabView/MonkeyTapView.swift,
 			);
 			target = 48011EB42C36A9B5008A5E0F /* MonkeyRading */;
 		};
@@ -100,9 +104,12 @@
 		4871FE832C36CC01003BCD88 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
+				BookData.swift,
+				BookSetData.swift,
 				HomeData.swift,
 				LoginData.swift,
 				LoginNickNameDataModel.swift,
+				ScanBookData.swift,
 			);
 			target = 48011EB42C36A9B5008A5E0F /* MonkeyRading */;
 		};
@@ -117,6 +124,7 @@
 		4871FEB02C36DD7C003BCD88 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
+				BookRecommendDetailRow.swift,
 				CustomTextField.swift,
 			);
 			target = 48011EB42C36A9B5008A5E0F /* MonkeyRading */;
@@ -124,7 +132,9 @@
 		488110852C36C7D400E6A742 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
+				BookSetViewModel.swift,
 				HomeViewModel.swift,
+				ISBNInputViewModel.swift,
 				LoginViewModel.swift,
 				NickNameViewModel.swift,
 			);
@@ -133,7 +143,10 @@
 		488110892C36C8A600E6A742 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
+				BookAPITarget.swift,
+				CreateBook.swift,
 				HomeAPITarget.swift,
+				KakaoBookAPITarget.swift,
 				UserAPITarget.swift,
 			);
 			target = 48011EB42C36A9B5008A5E0F /* MonkeyRading */;
@@ -433,6 +446,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MonkeyRading/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "This app requires access to the camera to take photos";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -463,6 +477,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MonkeyRading/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "This app requires access to the camera to take photos";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

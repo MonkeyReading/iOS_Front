@@ -33,7 +33,7 @@ struct SentenceCard: View {
     
     private var bookSentenceData: some View {
         HStack(spacing: 16, content: {
-            if let imageUrl = URL(string: sentenceData.bookUrl) {
+            if let imageUrl = URL(string: sentenceData.image_url) {
                 KFImage(imageUrl)
                     .placeholder{
                         ProgressView()
@@ -45,23 +45,17 @@ struct SentenceCard: View {
             }
             
             VStack(alignment: .leading, spacing: 6, content: {
-                Text(sentenceData.bookName)
+                Text(sentenceData.title)
                     .font(.large_Semibold)
                     .foregroundStyle(Color.Font_Emphasize)
                     .lineLimit(nil)
                 
-                Text(sentenceData.bookSentence)
+                Text(sentenceData.quote)
                     .font(.regular_Medium)
                     .foregroundStyle(Color.Font_Sub)
                     .lineLimit(nil)
             })
             .frame(width: 216, height: 100)
         })
-    }
-}
-
-struct SentenceCard_Preview:PreviewProvider {
-    static var previews: some View {
-        SentenceCard(sentenceData: SentenceList(bookUrl: "https://contents.kyobobook.co.kr/sih/fit-in/458x0/pdt/9791188331796.jpg", bookName: "Brown Bear, Brown Bear, What Do You See?", bookSentence: "“Brown Bear, Brown Bear, What do you see?”, “I see a red bird looking at me.”"))
     }
 }

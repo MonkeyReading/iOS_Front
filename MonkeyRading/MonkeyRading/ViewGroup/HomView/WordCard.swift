@@ -59,10 +59,3 @@ struct WordCard: View {
         .frame(width: 132, height: 207)
     }
 }
-
-struct WordCard_Preview: PreviewProvider {
-    static var previews: some View {
-        WordCard(wordData: WordList(word_id: 1, korean: "돼지", english: "pig", image_url: "https://i.natgeofe.com/n/4f5aaece-3300-41a4-b2a8-ed2708a0a27c/domestic-dog_thumb_square.jpg?wp=1&w=272&h=272"))
-            .previewLayout(.sizeThatFits)
-    }
-}
