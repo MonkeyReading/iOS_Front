@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct HomeView: View {
-//    @EnvironmentObject var userState: UserState
+    @EnvironmentObject var userState: UserState
     @StateObject private var viewModel = HomeViewModel()
     
     var body: some View {
@@ -23,7 +23,7 @@ struct HomeView: View {
                         Text("어서오세요!")
                             .font(.yangji(type: .regular, size: 20))
                             .foregroundStyle(Color.ColorDisable)
-                        Text("OOO 어린이!")
+                        Text("\(String(describing: userState.userName)) 어린이!")
                             .font(.yangji(type: .regular, size: 20))
                             .foregroundStyle(Color.ColorMain)
                     })

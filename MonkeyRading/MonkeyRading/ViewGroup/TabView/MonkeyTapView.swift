@@ -46,6 +46,14 @@ struct MonkeyTapView: View {
                             .aspectRatio(contentMode: .fit)
                     }
                     .tag(MonkeyReadingTab.book)
+                
+                ContentView()
+                    .tabItem {
+                        Icon.ARIcon.image
+                            .fixedSize()
+                            .aspectRatio(contentMode: .fit)
+                    }
+                    .tag(MonkeyReadingTab.ar)
             }
             
             

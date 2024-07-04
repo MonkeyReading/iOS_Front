@@ -32,6 +32,7 @@
 		48011ECF2C36AA20008A5E0F /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
+				ARView/ARView.swift,
 				Book/BookCard.swift,
 				Book/BookSetView.swift,
 				HomView/HomeView.swift,
@@ -97,6 +98,36 @@
 				"Pretendard-SemiBold.otf",
 				"Pretendard-Thin.otf",
 				YANGJIN.otf,
+			);
+			target = 48011EB42C36A9B5008A5E0F /* MonkeyRading */;
+		};
+		4871006D2C3740B4003BCD88 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Bear/Bear_sound.mp3,
+				Bear/Bear.usdz,
+				Cat/Cat_sound.mp3,
+				Cat/Cat.usdz,
+				Chicken/Chicken_sound.mp3,
+				Chicken/Chicken.usdz,
+				Crow/Crow_sound.mp3,
+				Crow/Crow.usdz,
+				Dog/dog.mp3,
+				Dog/dog.usdz,
+				Duck/duck.mp3,
+				Duck/duck.usdz,
+				Fish/goldfish.mp3,
+				Fish/goldfish.usdz,
+				Frog/frog.mp3,
+				Frog/frog.usdz,
+				horse/horse_sound.mp3,
+				horse/horse.usdz,
+				Pig/pig.mp3,
+				Pig/pig.usdz,
+				"Red Bird/Red Bird_sound.mp3",
+				"Red Bird/Red Bird.usdz",
+				Sheep/Sheep_sound.mp3,
+				Sheep/Sheep.usdz,
 			);
 			target = 48011EB42C36A9B5008A5E0F /* MonkeyRading */;
 		};
@@ -168,6 +199,7 @@
 		48011EDF2C36AAE8008A5E0F /* TokenRefresh */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (48011EE22C36AAFC008A5E0F /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = TokenRefresh; sourceTree = "<group>"; };
 		48011EF42C36ABF9008A5E0F /* Fonts */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (48011F0C2C36AD39008A5E0F /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = Fonts; sourceTree = "<group>"; };
 		48011F622C36B757008A5E0F /* Kakao */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (4871FE802C36CBA2003BCD88 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = Kakao; sourceTree = "<group>"; };
+		487100302C37402A003BCD88 /* USDZFile */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (4871006D2C3740B4003BCD88 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = USDZFile; sourceTree = "<group>"; };
 		4871FEA42C36D995003BCD88 /* ImagePicker */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (4871FEA72C36D9AA003BCD88 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = ImagePicker; sourceTree = "<group>"; };
 		4871FEAC2C36DD6C003BCD88 /* Components */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (4871FEB02C36DD7C003BCD88 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = Components; sourceTree = "<group>"; };
 		488110862C36C83800E6A742 /* APITargets */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (488110892C36C8A600E6A742 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = APITargets; sourceTree = "<group>"; };
@@ -213,6 +245,7 @@
 		48011EB72C36A9B5008A5E0F /* MonkeyRading */ = {
 			isa = PBXGroup;
 			children = (
+				487100302C37402A003BCD88 /* USDZFile */,
 				4871FEAC2C36DD6C003BCD88 /* Components */,
 				4871FEA42C36D995003BCD88 /* ImagePicker */,
 				48011F1D2C36ADA2008A5E0F /* Info.plist */,

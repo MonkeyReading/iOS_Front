@@ -27,6 +27,8 @@ enum Icon: String {
     case Background = "Background"
     case human = "human"
     case bookPng = "bookPng"
+    
+    case ARIcon = "증강"
     // MARK: - Function
     var image: Image {
         return Image(self.rawValue)
@@ -44,7 +46,7 @@ enum Icon: String {
         case .home: return "clickHome"
         case .barcode: return "clickBarcode"
         case .book: return "clickBook"
-        case .question: return "clickQuestion"
+        case .ARIcon: return "clickQuestion"
 
         default:
             return self.rawValue
