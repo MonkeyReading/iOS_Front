@@ -9,10 +9,10 @@ import Foundation
 
 
 struct LoginData: Codable {
-    var access_Token: String
+    var auth_code: String
 }
 
 struct LoginResponseData: Codable {
-    var accessToken: String
-    var refreshToken: String
+    var access_token: String
+    var refresh_token: String
 }
