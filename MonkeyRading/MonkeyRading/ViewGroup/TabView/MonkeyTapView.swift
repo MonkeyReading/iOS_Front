@@ -27,7 +27,7 @@ struct MonkeyTapView: View {
                             .aspectRatio(contentMode: .fit)
                     }
                     .tag(MonkeyReadingTab.homeTab)
-//                    .environmentObject(userState)
+                    .environmentObject(userState)
                 
 
                 
@@ -46,6 +46,7 @@ struct MonkeyTapView: View {
                             .aspectRatio(contentMode: .fit)
                     }
                     .tag(MonkeyReadingTab.book)
+                    .environmentObject(userState)
                 
                 ContentView()
                     .tabItem {
