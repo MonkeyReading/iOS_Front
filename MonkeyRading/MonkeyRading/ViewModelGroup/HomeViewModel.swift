@@ -37,44 +37,26 @@ class HomeViewModel: ObservableObject {
             homeResponseData = decodedData
         } catch {
             homeResponseData = nil
-            if let error = error as? DecodingError {
-                        switch error {
-                        case .dataCorrupted(let context):
-                            print("Data corrupted: \(context.debugDescription)")
-                            if let underlyingError = context.underlyingError {
-                                print("Underlying error: \(underlyingError.localizedDescription)")
-                            }
-                        case .keyNotFound(let key, let context):
-                            print("Key '\(key)' not found: \(context.debugDescription)")
-                        case .typeMismatch(let type, let context):
-                            print("Type '\(type)' mismatch: \(context.debugDescription)")
-                        case .valueNotFound(let value, let context):
-                            print("Value '\(value)' not found: \(context.debugDescription)")
-                        @unknown default:
-                            print("Unknown error: \(error)")
-                        }
-                    } else {
-                        print("Error: \(error.localizedDescription)")
-                    }
+            print("단어장 해독 불가")
             
         }
     }
     
     public func getSentence() {
-        provider.request(.getHomeData) { [weak self] result in
+        provider.request(.sentenceData) { [weak self] result in
             switch result {
             case .success(let response):
-                self?.handleResponse(response: response)
+                self?.handlesentence(response: response)
             case .failure(let error):
                 print("단어 받아오기 에러: \(error)")
             }
         }
     }
     
-    public func Sentence(response: Response) {
+    public func handlesentence(response: Response) {
         do {
-            let decodedData = try JSONDecoder().decode(HomeResponseData.self, from: response.data)
-            homeResponseData = decodedData
+            let decodedData = try JSONDecoder().decode(HomeSentenceData.self, from: response.data)
+            sentenceData = decodedData
         } catch {
             homeResponseData = nil
             print("단어 해독 실패 : \(error)")

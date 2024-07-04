@@ -23,7 +23,8 @@ struct HomeSentenceData: Codable {
 }
 
 struct SentenceList: Codable, Hashable {
-    var bookUrl: String
-    var bookName: String
-    var bookSentence: String
+    var sentence_id: Int
+    var title: String
+    var quote: String
+    var image_url: String
 }

@@ -14,14 +14,28 @@ struct HomeView: View {
     var body: some View {
         ScrollView(.vertical, content: {
             VStack(spacing: 20, content: {
-                Icon.backgroundImage.image
+                ZStack(alignment: .topLeading, content: {
+                    Icon.background.image
+                    VStack(alignment: .leading, content: {
+                        
+                        Spacer().frame(height: 100)
+                        
+                        Text("어서오세요!")
+                            .font(.yangji(type: .regular, size: 20))
+                            .foregroundStyle(Color.ColorDisable)
+                        Text("OOO 어린이!")
+                            .font(.yangji(type: .regular, size: 20))
+                            .foregroundStyle(Color.ColorMain)
+                    })
+                    .padding(.leading, 40)
+                })
+                
                 lastWord
                 lastSentence
             })
             .padding(.horizontal, 10)
         })
-        .frame(maxHeight: .infinity)
-        .border(Color.black)
+        .frame(maxHeight: .infinity).ignoresSafeArea(.all)
  
     }
     
@@ -57,13 +71,13 @@ struct HomeView: View {
                 .font(.yangji(type: .regular, size: 18))
                 .foregroundStyle(Color.Font_Emphasize)
             
-            LazyHGrid(rows: Array(repeating: GridItem(.flexible(minimum: 0, maximum: 142)), count: 1), content: {
+            LazyVGrid(columns: Array(repeating: GridItem(.flexible(minimum: 0, maximum: 142)), count: 1), content: {
                 ForEach(viewModel.sentenceData?.sentence_list ?? [], id: \.self) { data in
                     SentenceCard(sentenceData: data)
                 }
             })
             .padding(.horizontal, 15)
-            .padding(.bottom, 20)
+            .padding(.bottom, 100)
             .frame(maxWidth: .infinity, maxHeight: .infinity)
             .refreshable {
                 print("리프레시 진행")
@@ -72,6 +86,9 @@ struct HomeView: View {
                     viewModel.getWordList()
                 }
             }
+        }
+        .onAppear {
+            viewModel.getSentence()
         }
     }
 }

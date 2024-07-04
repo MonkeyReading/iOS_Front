@@ -24,7 +24,7 @@ enum Icon: String {
     
     case guide = "guide"
     
-    case backgroundImage = "backgroundImage"
+    case background = "background"
     // MARK: - Function
     var image: Image {
         return Image(self.rawValue)
