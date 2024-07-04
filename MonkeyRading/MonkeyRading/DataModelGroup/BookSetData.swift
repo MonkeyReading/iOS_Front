@@ -11,7 +11,7 @@ struct BookSetData: Codable {
     var book_list: [BookResponseData]
 }
 
-struct BookResponseData: Codable {
+struct BookResponseData: Codable, Hashable {
     var book_id: Int
     var title: String
     var image_url: String

@@ -15,7 +15,7 @@ struct HomeView: View {
         ScrollView(.vertical, content: {
             VStack(spacing: 20, content: {
                 ZStack(alignment: .topLeading, content: {
-                    Icon.background.image
+                    Icon.Background.image
                     VStack(alignment: .leading, content: {
                         
                         Spacer().frame(height: 100)

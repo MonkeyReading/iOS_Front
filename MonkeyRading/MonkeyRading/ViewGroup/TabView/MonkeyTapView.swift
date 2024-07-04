@@ -9,7 +9,7 @@ import SwiftUI
 
 struct MonkeyTapView: View {
     
-//    @EnvironmentObject var userState: UserState
+    @EnvironmentObject var userState: UserState
     @State private var selectedTab: MonkeyReadingTab = .homeTab
     @State private var opacity = 0.0
     
@@ -38,6 +38,14 @@ struct MonkeyTapView: View {
                             .aspectRatio(contentMode: .fit)
                     }
                     .tag(MonkeyReadingTab.barcode)
+                
+                BookSetView()
+                    .tabItem {
+                        Icon.bookPng.image
+                            .fixedSize()
+                            .aspectRatio(contentMode: .fit)
+                    }
+                    .tag(MonkeyReadingTab.book)
             }
             
             

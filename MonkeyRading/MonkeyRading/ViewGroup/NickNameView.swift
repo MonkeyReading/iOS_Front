@@ -9,10 +9,8 @@ import SwiftUI
 
 struct NickNameView: View {
     
-//    @EnvironmentObject var userState: UserState
+    @EnvironmentObject var userState: UserState
     @StateObject var viewModel: NickNameViewModel
-    
-    
     
     var body: some View {
         allView
@@ -86,6 +84,7 @@ struct NickNameView: View {
         Button(action: {
             if viewModel.beginBtn && viewModel.beginBtnTwo {
                 viewModel.isProfileCompleted = true
+                userState.updateName(userName: viewModel.nickNameText)
             }
         }, label: {
             ZStack {

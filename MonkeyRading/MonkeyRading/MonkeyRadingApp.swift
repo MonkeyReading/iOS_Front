@@ -6,18 +6,30 @@
 //
 
 import SwiftUI
-//import KakaoSDKCommon
-//import KakaoSDKAuth
+import KakaoSDKCommon
+import KakaoSDKAuth
 
 @main
 struct MonkeyRadingApp: App {
     
-//    init() {
-//        KakaoSDK.initSDK(appKey: "6a800afa4dbc24a46a0791cf71405699")
-//    }
+    @StateObject private var userState = UserState()
+    @StateObject private var loginViewModel = LoginViewModel()
+    @StateObject private var profileViewModel = NickNameViewModel()
+    
+    init() {
+        KakaoSDK.initSDK(appKey: "6a800afa4dbc24a46a0791cf71405699")
+    }
     var body: some Scene {
         WindowGroup {
-            MonkeyTapView()
+            if !loginViewModel.isLogin {
+                LoginView(viewModel: loginViewModel)
+            } else if !profileViewModel.isProfileCompleted {
+                NickNameView(viewModel: profileViewModel)
+                    .environmentObject(userState)
+            } else {
+                MonkeyTapView()
+                    .environmentObject(userState)
+            }
         }
     }
 }
