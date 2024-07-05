@@ -13,7 +13,7 @@ struct QuestionView: View {
     @StateObject var viewModel: QuestionViewModel = QuestionViewModel()
     
     var body: some View {
-        VStack(spacing: -4, content: {
+        VStack(spacing: -2, content: {
             backgroundView
             bookCardBackground
         })
@@ -26,6 +26,7 @@ struct QuestionView: View {
                 .aspectRatio(contentMode: .fill)
             topInfor
         })
+        .padding(.top, 30)
     }
     
     private var topInfor: some View {
@@ -47,11 +48,14 @@ struct QuestionView: View {
     private var bookCardBackground: some View {
         ScrollView(.vertical, content: {
             LazyVGrid(columns: Array(repeating: GridItem(.flexible(minimum: 0, maximum: 110)), count: 1), spacing: 20, content: {
-                ForEach(viewModel.bookQuestionResponseData?.bookData ?? [], id: \.self) { data in
+                ForEach(viewModel.bookQuestionResponseData?.bookQuestion ?? [], id: \.self) { data in
                     BookQuestionCard(data: data)
                 }
             })
         })
+        .onAppear {
+            viewModel.getQuestion()
+        }
         .background(Color.white)
         .roundedCorner(20, corners: [.topLeft, .topRight])
         .shadow01()

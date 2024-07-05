@@ -16,7 +16,7 @@ extension QuestionAPITarget: TargetType {
     
     
     var baseURL: URL {
-        return URL(String: "example")!
+        return URL(string: "example")!
     }
     
     var path: String {
@@ -29,7 +29,7 @@ extension QuestionAPITarget: TargetType {
     var method: Moya.Method {
         switch self {
         case .getQuestion:
-            .get
+                .get
         }
     }
     
@@ -41,17 +41,25 @@ extension QuestionAPITarget: TargetType {
     }
     
     var headers: [String : String]? {
-        var headers: [String: String]? {
-            return [
-                "Content-Type": "application/json",
-                "accept": "*/*"
-            ]
-        }
+        return [
+            "Content-Type": "application/json",
+            "accept": "*/*"
+        ]
     }
     
     var sampleData: Data {
         let json = """
-"""
+           {
+               "bookQuestion" : [
+                   {
+                       "imageUrl": "https://contents.kyobobook.co.kr/sih/fit-in/458x0/pdt/9791188331796.jpg",
+                       "bookname": "The Tale of Peter Rabbit",
+                       "date": "24/7/5",
+                       "finish": "미답변"
+                   }
+               ]
+           }
+           """
         
         return Data(json.utf8)
     }

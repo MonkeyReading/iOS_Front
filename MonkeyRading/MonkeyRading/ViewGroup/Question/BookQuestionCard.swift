@@ -16,9 +16,9 @@ import Kingfisher
 
 struct BookQuestionCard: View {
     
-    let data: BookQuestionCardData
+    let data: BookQuestionData
     
-    init(data: BookQuestionCardData) {
+    init(data: BookQuestionData) {
         self.data = data
     }
     
@@ -27,6 +27,7 @@ struct BookQuestionCard: View {
             bookCover
             bookInfo
         })
+        .frame(width: 354, height: 110)
     }
     
     @ViewBuilder
@@ -45,7 +46,7 @@ struct BookQuestionCard: View {
     
     private var bookInfo: some View {
         VStack(alignment: .leading, content: {
-            Text(data.bookName)
+            Text(data.bookname)
                 .font(.large_Semibold)
                 .foregroundStyle(Color.Font_Sub)
             Text(data.date)
@@ -64,6 +65,7 @@ struct BookQuestionCard: View {
                 }, label: {
                     Text("답변하기")
                         .foregroundStyle(Color.white)
+                        .clipShape(.rect(cornerRadius: 6))
                         .frame(width: 81, height: 33)
                         .clipShape(.rect(cornerRadius: 6))
                         .background(Color.ColorMain)

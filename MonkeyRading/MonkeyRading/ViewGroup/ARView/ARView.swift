@@ -53,7 +53,7 @@ struct ARViewContainer: UIViewRepresentable {
         var parent: ARViewContainer
         var textRecognitionRequest: VNRecognizeTextRequest?
         var player: AVAudioPlayer?
-        let allowedAnimals = ["duck", "dog"]
+        let allowedAnimals = ["duck", "dog", "bear", "chicken", "crow", "frog", "horse", "pig", "sheep"]
         
         init(_ parent: ARViewContainer) {
             self.parent = parent
